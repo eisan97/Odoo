@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <tree editable="bottom" >
                 <field name="name" />
-                <field name="complete" />
+                <field name="complete" widget="boolean_toggle" />
             </tree>
         </field>
     </record>
@@ -20,6 +20,12 @@
         <field name="context">{}</field>
     </record>
 
+    <record id="todo_client_action" model="ir.actions.client">
+        <field name="name">Todo Client Action</field>
+        <field name="tag">todo.todo_client_action</field>
+        <!-- <field name="target">fullscreen</field> -->
+    </record>
+
     <menuitem
         id="todo_root_menu"
         name="Todo"
@@ -30,5 +36,12 @@
         action="todo_action"
         parent="todo_root_menu"
         sequence="0"/>
+
+    <menuitem
+        id="todo_client_action_menu"
+        name="Todo Client Action Menu"
+        action="todo_client_action"
+        parent="todo_root_menu"
+        sequence="5"/>
 
 </odoo>

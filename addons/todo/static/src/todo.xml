@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates> 
+    <t t-name="todo.todo_list" owl="1">
+        <div class="container">
+            <h1>Welcome from Todo List </h1>
+            <button class="btn btn-primary">New</button>
+        </div>        
+    </t>
+</templates>
