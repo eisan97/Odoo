@@ -4,6 +4,25 @@
         <div class="container">
             <h1>Welcome from Todo List </h1>
             <button class="btn btn-primary">New</button>
-        </div>        
+        </div>       
+        <table class="table mx-5" >
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Complete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr t-foreach="state.tasklist" t-as="task" t-key="task.id">
+                    <td t-esc="task.id" />
+                    <td t-esc="task.name" />
+                    <!-- <td t-esc="task.complete" /> -->
+                    <td>
+                        <input type="checkbox" class="form-check-input" t-att-checked="task.complete" />
+                    </td>
+                </tr>
+            </tbody>            
+        </table> 
     </t>
 </templates>
